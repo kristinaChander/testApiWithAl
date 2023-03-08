@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class TestApi1 {
+public class RestAssuredNoSuggestionsTest {
 
     @Test
     public void getFeatureToggleOnUser() {
