@@ -38,8 +38,7 @@ public class RestAssuredNoSuggestionsTest {
 
     @SneakyThrows
     private List<LaunchGeneralDataDto> getLaunchesListFromJson(String launches) {
-        return mapper.readValue(launches, new TypeReference<>() {
-        });
+        return mapper.readValue(launches, new TypeReference<>() {});
     }
 
     @SneakyThrows

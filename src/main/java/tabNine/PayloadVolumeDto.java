@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class PayloadVolumeDto {
     @JsonProperty("cubic_meters")
-    private int cubic_meters;
+    private int cubicMeters;
     @JsonProperty("cubic_feet")
-    private int cubic_feet;
+    private int cubicFeet;
 }

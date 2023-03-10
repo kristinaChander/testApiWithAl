@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 public class TrunkDto {
-    @JsonProperty("payload_volume")
-    private PayloadVolumeDto payloadVolume;
+    @JsonProperty("trunk_volume")
+    private PayloadVolumeDto trunkVolume;
     @JsonProperty("cargo")
     private CargoDto cargo;
 }

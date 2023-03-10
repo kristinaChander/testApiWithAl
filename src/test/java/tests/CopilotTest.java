@@ -34,7 +34,6 @@ public class CopilotTest {
                 .getBody().prettyPrint();
         CopilotMissionDto oneMission = getOneMission(oneMissionJson);
         assertEquals(firstMissionDto, oneMission);
-
     }
 
     @SneakyThrows
@@ -44,8 +43,7 @@ public class CopilotTest {
 
     @SneakyThrows
     private List<CopilotMissionDto> getMissionList(String missions) {
-        return mapper.readValue(missions, new TypeReference<>() {
-        });
+        return mapper.readValue(missions, new TypeReference<>() {});
     }
 
 }

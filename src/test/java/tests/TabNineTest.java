@@ -31,7 +31,6 @@ public class TabNineTest {
 
         TabNineDragonsDto oneDragon = getOneDragon(oneDragonString);
         assertEquals(dragonFromListDto, oneDragon);
-
     }
 
     @SneakyThrows
@@ -41,7 +40,6 @@ public class TabNineTest {
 
     @SneakyThrows
     private List<TabNineDragonsDto> getElementFromList(String value) {
-        return mapper.readValue(value, new TypeReference<>() {
-        });
+        return mapper.readValue(value, new TypeReference<>() {});
     }
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class ThrustDto {
-    private double kN;
+    @JsonProperty("kN")
+    private double kn;
     private double lbf;
 }
