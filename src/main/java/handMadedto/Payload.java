@@ -1,18 +1,12 @@
 package handMadedto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class Payload {
     @JsonProperty("payload_id")
     private String payloadId;
@@ -31,10 +25,15 @@ public class Payload {
     private String orbit;
     @JsonProperty("orbit_params")
     private OrbitParams orbitParams;
-    private String cap_serial;
-    private double mass_returned_kg;
-    private double mass_returned_lbs;
-    private int flight_time_sec;
-    private String cargo_manifest;
+    @JsonProperty("cap_serial")
+    private String capSerial;
+    @JsonProperty("mass_returned_kg")
+    private double massReturnedKg;
+    @JsonProperty("mass_returned_lbs")
+    private double massReturnedLbs;
+    @JsonProperty("flight_time_sec")
+    private int flightTimeSec;
+    @JsonProperty("cargo_manifest")
+    private String cargoManifest;
     private String uid;
 }

@@ -1,17 +1,11 @@
 package handMadedto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class LaunchGeneralDataDto {
     @JsonProperty("flight_number")
     private int flightNumber;
@@ -34,7 +28,7 @@ public class LaunchGeneralDataDto {
     private String tentativeMaxPrecision;
     private boolean tbd;
     @JsonProperty("launch_window")
-    private int launch_window;
+    private int launchWindow;
     private Rocket rocket;
     private List<Object> ships;
     private Telemetry telemetry;
@@ -52,12 +46,18 @@ public class LaunchGeneralDataDto {
     private int staticFireDateUnix;
     private Timeline timeline;
     private List<String> crew;
-    private String last_date_update;
-    private String last_ll_launch_date;
-    private String last_ll_update;
-    private String last_wiki_launch_date;
-    private String last_wiki_revision;
-    private String last_wiki_update;
-    private String launch_date_source;
-
+    @JsonProperty("last_date_update")
+    private String lastDateUpdate;
+    @JsonProperty("last_ll_launch_date")
+    private String lastLlLaunchDate;
+    @JsonProperty("last_ll_update")
+    private String lastLlUpdate;
+    @JsonProperty("last_wiki_launch_date")
+    private String lastWikiLaunchDate;
+    @JsonProperty("last_wiki_revision")
+    private String lastWikiRevision;
+    @JsonProperty("last_wiki_update")
+    private String lastWikiUpdate;
+    @JsonProperty("launch_date_source")
+    private String launchDateSource;
 }
