@@ -25,13 +25,15 @@ public class RestAssuredNoSuggestionsTest {
                 .getBody()
                 .asPrettyString();
 
+        LaunchGeneralDataDto firstLaunchDto = getLaunchesListFromJson(launches).get(0);
+        int flightNumber = firstLaunchDto.getFlightNumber();
         String firstLaunch = given().contentType(ContentType.JSON)
                 .when()
-                .get("launches/1")
+                .get("launches/" + flightNumber)
                 .getBody()
                 .asPrettyString();
 
-        assertEquals(getLaunch(firstLaunch), getLaunchesListFromJson(launches).get(0));
+        assertEquals(getLaunch(firstLaunch), firstLaunchDto);
     }
 
     @SneakyThrows
